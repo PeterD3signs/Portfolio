@@ -1,0 +1,10 @@
+@import 'tailwindcss';
+@plugin "daisyui"{
+  themes: autumn, sunset --prefersdark;
+}
+
+@plugin "daisyui/theme" {
+  name: "autumn";
+  default: true;
+  --color-neutral: white;
+}
