@@ -4,8 +4,8 @@
   let canvas: HTMLCanvasElement;
   let ctx: CanvasRenderingContext2D;
 
-  export let rectSize = 50;
-  export let baseColor = [237, 196, 62]; // RGB array
+  export let rectSize = 50; //Set rectangle size
+  export let baseColor = [237, 196, 62]; // Set rectangle color
 
   let width = 0;
   let height = 0;
@@ -24,13 +24,13 @@
 
     for (let y = 0; y < height; y += rectSize) {
       for (let x = 0; x < width; x += rectSize) {
-        const dx = mouseX - (x + rectSize / 2);
-        const dy = mouseY - (y + rectSize / 2);
-        const dist = Math.sqrt(dx * dx + dy * dy);
-        const maxDist = Math.sqrt(width * width + height * height);
-        const norm = dist / maxDist;
-        const brightness = 0.7 * (1 - Math.pow(norm, 0.3));
-        ctx.fillStyle = `rgba(${baseColor.join(',')}, ${brightness})`;
+        const dx = mouseX - (x + rectSize / 2); // Distance form the center of the rectangle to the mouse on the X axis
+        const dy = mouseY - (y + rectSize / 2); // Distance form the center of the rectangle to the mouse on the Y axis
+        const dist = Math.sqrt(dx * dx + dy * dy);  // Absolute distance calculated from the Pythagorean theorem
+        const maxDist = Math.sqrt(width * width + height * height); // Maximum possible disctance
+        const norm = dist / maxDist;  // Normalized distance between 0 and 1
+        const brightness = 0.7 * (1 - Math.pow(norm, 0.3)); // Brightness based on distance from the mouse (0.7 factor sleected by trial and error)
+        ctx.fillStyle = `rgba(${baseColor.join(',')}, ${brightness})`;  // Connect base color with alpha
         ctx.fillRect(x, y, rectSize, rectSize);
       }
     }

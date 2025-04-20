@@ -1,6 +1,7 @@
 <script lang="ts">
     import Header from "../components/Header.svelte";
 	import '../app.css';
+	import Footer from "../components/Footer.svelte";
 
     function goTop() {
         document.body.scrollIntoView();
@@ -14,3 +15,4 @@
 >
     {@render children()}
 </div>
+<Footer />
