@@ -38,5 +38,11 @@ import AnimatedRectangles from "./AnimatedRectangles.svelte";
                 class="object-cover z-[2] max-h-[70vh]"
             />
         </div>
+        <!-- Placeholder element for the About section -->
+        <div id="about" class="hidden">
+            <!-- You can add some placeholder content here, if desired -->
+            <h2>About Section Placeholder</h2>
+        </div>
     </section>
 </main>
+
