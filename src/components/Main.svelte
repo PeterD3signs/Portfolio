@@ -1,6 +1,61 @@
-<script>
-import "../app.css";
-import AnimatedRectangles from "./AnimatedRectangles.svelte";
+<script lang="ts">
+    import "../app.css";
+    import AnimatedRectangles from "./AnimatedRectangles.svelte";
+    import Carousel from "./Carousel.svelte";
+
+    let ProgCardArr = [
+        {
+            img_src: "favicon.png",
+            img_alt: "Placeholder image",
+            title: "Prog 1",
+            text: "Description of project 1",
+        },
+        {
+            img_src: "favicon.png",
+            img_alt: "Placeholder image",
+            title: "Prog 2",
+            text: "Description of project 2",
+        },
+        {
+            img_src: "favicon.png",
+            img_alt: "Placeholder image",
+            title: "Prog 3",
+            text: "Description of project 3",
+        },
+        {
+            img_src: "favicon.png",
+            img_alt: "Placeholder image",
+            title: "Prog 4",
+            text: "Description of project 4",
+        },
+    ];
+    let LegoCardArr = [
+        {
+            img_src: "favicon.png",
+            img_alt: "Placeholder image",
+            title: "l 1",
+            text: "Description of project 1",
+        },
+        {
+            img_src: "favicon.png",
+            img_alt: "Placeholder image",
+            title: "l 2",
+            text: "Description of project 2",
+        },
+        {
+            img_src: "favicon.png",
+            img_alt: "Placeholder image",
+            title: "l 3",
+            text: "Description of project 3",
+        },
+        {
+            img_src: "favicon.png",
+            img_alt: "Placeholder image",
+            title: "l 4",
+            text: "Description of project 4",
+        },
+    ];
+
 </script>
 
 <main class="flex flex-col flex-1 p-4">
@@ -23,7 +78,7 @@ import AnimatedRectangles from "./AnimatedRectangles.svelte";
                 <h2 class="font-semibold text-5xl sm:text-5xl md:text-5xl">
                     - <span class="poppins text-primary">IT Student</span>
                     <br />- <span class="poppins text-primary">Custom set designer</span>
-                    <br />- <span class="poppins text-primary">Life-long learner</span>
+                    <br />- <span class="poppins text-primary">Ambitious learner</span>
                 </h2>
                 <p class="text-base sm:text-lg md:text-xl">
                     I constantly look for <span class="poppins text-primary">new challanges</span>, <span class="poppins text-primary">interesting projects</span> and <span class="poppins text-primary">opportunities to expad my knowledge</span>.
@@ -38,11 +93,11 @@ import AnimatedRectangles from "./AnimatedRectangles.svelte";
                 class="object-cover z-[2] max-h-[70vh]"
             />
         </div>
-        <!-- Placeholder element for the About section -->
-        <div id="about" class="hidden">
-            <!-- You can add some placeholder content here, if desired -->
-            <h2>About Section Placeholder</h2>
-        </div>
     </section>
+    <section id="about" class="flex alin-center justify-center">
+        <Carousel cards={ProgCardArr} moveRight={true}/>
+    </section>
+    <Carousel cards={LegoCardArr}/>
 </main>
+
 
