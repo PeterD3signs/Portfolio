@@ -20,8 +20,7 @@
     export let tabs: Tab[] = [
         { name: "About", link: "/#about", scroll: true },
         { name: "Programming", link: "/programming" },
-        { name: "LEGO®", link: "/lego" },
-        { name: "Misc", link: "/misc" }
+        { name: "LEGO®", link: "/lego" }
     ];
 
     // Scroll to the about section if needed
@@ -68,7 +67,7 @@
             <a
                 href="{base}{tab.link}"
                 on:click|preventDefault={() => handleClick(tab)}
-                class={`btn btn btn-soft btn-primary ${ isActive(`${base}/${tab.link}`) ? "underline" : ""}`}
+                class={`btn btn-soft btn-primary ${ isActive(`${base}/${tab.link}`) ? "underline" : ""}`}
             >
                 <p>{tab.name}</p>
             </a>
