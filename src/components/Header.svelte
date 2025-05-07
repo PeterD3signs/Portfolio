@@ -67,7 +67,7 @@
             <a
                 href="{base}{tab.link}"
                 on:click|preventDefault={() => handleClick(tab)}
-                class={`btn btn-soft btn-primary ${ isActive(`${base}/${tab.link}`) ? "underline" : ""}`}
+                class={`btn btn-soft ${ isActive(`${base}/${tab.link}`) ? "underline" : ""}`}
             >
                 <p>{tab.name}</p>
             </a>
