@@ -3,6 +3,7 @@
 	import AnimatedRectangles from './AnimatedRectangles.svelte';
 	import Carousel from './Carousel.svelte';
     import Terminal from './Terminal.svelte';
+	import LegoHouse from './LegoHouse.svelte';
 
 	let ProgCardArr = [
 		{
@@ -95,6 +96,11 @@
 		</div>
 	</section>
 	<section id="about" class="w-full space-y-4">
+		<div class="flex w-full justify-between">
+			<h2 class="text-5xl font-semibold sm:text-5xl md:text-5xl">
+				Programming:
+			</h2>
+		</div>
 		<div class="flex w-full justify-between">
 			<h2 class="text-5xl font-semibold sm:text-5xl md:text-5xl">
 				↙ Some of my <span class="poppins text-primary">Programming projects</span>

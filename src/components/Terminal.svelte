@@ -108,7 +108,7 @@
 			on:click={toggleTerminal}
 			on:keydown={(e) => e.key === 'Enter' && toggleTerminal()}
 		>
-			<p class="text-primary">Click here to learn more about my Projects and Skills!</p>
+			<p class="text-primary"><u>Click here to learn more about my Projects and Skills!</u></p>
 		</div>
 	{/if}
 
