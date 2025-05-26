@@ -3,7 +3,6 @@
 	import AnimatedRectangles from './AnimatedRectangles.svelte';
 	import Carousel from './Carousel.svelte';
     import Terminal from './Terminal.svelte';
-	import LegoHouse from './LegoHouse.svelte';
 
 	let ProgCardArr = [
 		{
